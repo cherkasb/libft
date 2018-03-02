@@ -6,7 +6,7 @@
 /*   By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/16 20:19:30 by bcherkas          #+#    #+#             */
-/*   Updated: 2018/03/02 15:26:24 by bcherkas         ###   ########.fr       */
+/*   Updated: 2018/03/02 19:06:50 by bcherkas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ typedef struct		s_buf
 }					t_buf;
 
 char				*ft_strdup(const char *s1);
-size_t				ft_strlen(char *str);
+size_t				ft_strlen(const char *s);
 char				*ft_strstr(const char *haystack, const char *needle);
 int					ft_atoi(const char *str);
 char				*ft_strnew(size_t size);
