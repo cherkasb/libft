@@ -6,7 +6,7 @@
 /*   By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 18:16:40 by bcherkas          #+#    #+#             */
-/*   Updated: 2017/11/04 14:37:15 by bcherkas         ###   ########.fr       */
+/*   Updated: 2018/03/12 19:14:09 by bcherkas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl(char const *s)
 {
 	ft_putstr(s);
-	ft_putchar('\n');
+	write(1, "\n", 1);
 }

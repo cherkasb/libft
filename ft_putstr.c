@@ -6,7 +6,7 @@
 /*   By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 18:10:38 by bcherkas          #+#    #+#             */
-/*   Updated: 2017/11/07 21:18:06 by bcherkas         ###   ########.fr       */
+/*   Updated: 2018/03/12 19:12:59 by bcherkas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 void	ft_putstr(char const *s)
 {
+	size_t	i;
+
+	i = 0;
 	if (s == 0)
 		return ;
-	while (*s)
-	{
-		write(1, s, 1);
-		s++;
-	}
+	while (s[i])
+		i++;
+	write(1, s, i);
 }
