@@ -65,7 +65,7 @@ void			unicode_c(unsigned v, size_t size, uint8_t *buff, size_t *len)
 	}
 }
 
-uint8_t			*unicode_s(wint_t *v, t_pf *fm)
+uint8_t			*unicode_s(wchar_t *v, t_pf *fm)
 {
 	uint8_t	temp[4];
 	uint8_t	*str;

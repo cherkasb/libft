@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <inttypes.h>
+# include <stdint.h>
 
 # define MAXFORMATID 10
 # define COLORSMAX 11
@@ -88,7 +90,7 @@ void				ft_itoa_base(size_t n, int base, char *fin, t_pf *fm);
 size_t				base_ulen(size_t n, int base, size_t sep);
 void				unicode_c(unsigned v, size_t size,
 					uint8_t *buff, size_t *len);
-uint8_t				*unicode_s(wint_t *v, t_pf *fm);
+uint8_t				*unicode_s(wchar_t *v, t_pf *fm);
 t_buf				*null_pointer(t_pf *fm, t_buf *temp);
 
 int					writeformatted(char *buff, size_t size, t_buf **buflst);

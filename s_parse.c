@@ -43,7 +43,7 @@ static t_buf	*ls_parse(va_list ap, t_pf *fm, t_buf *temp)
 	size_t	i;
 
 	i = 0;
-	if (!(uni = va_arg(ap, wint_t *)))
+	if (!(uni = va_arg(ap, wchar_t *)))
 		return (null_pointer(fm, temp));
 	if (!(str = unicode_s(uni, fm)))
 		return (NULL);

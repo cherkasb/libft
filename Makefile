@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 .PHONY: all clean fclean re
-CC=gcc
+CC=clang
 CFLAGS=-Wall -Wextra -Werror
 GNLFILES=get_next_line.c
 PRINTFFILES=ft_printf.c ft_vprintf.c printf_core.c checkflags.c s_parse.c ft_utoa_base.c d_parse.c getsigned.c writeformatted.c x_parse.c o_parse.c u_parse.c p_parse.c unicode_c.c width.c k_parse.c

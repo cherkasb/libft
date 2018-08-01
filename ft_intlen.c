@@ -15,9 +15,7 @@
 int		ft_intlen(long n)
 {
 	int		i;
-	int		d;
 
-	d = 1;
 	if (n == 0)
 		return (1);
 	i = 0;
