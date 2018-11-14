@@ -6,7 +6,7 @@
 #    By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/30 19:19:19 by bcherkas          #+#    #+#              #
-#    Updated: 2018/08/29 17:45:29 by bcherkas         ###   ########.fr        #
+#    Updated: 2018/11/14 17:15:23 by bcherkas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ LSTDIR=lstlib/
 MEMDIR=memlib/
 STRDIR=strlib/
 TEXTDIR=textlib/
+PIPEDIR=pipelib/
 
 GNL=get_next_line.c
 
@@ -50,14 +51,17 @@ STRLIB=ft_strcat.c ft_strcmp.c ft_strdup.c ft_striteri.c ft_strlen.c \
 TEXTLIB=ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c ft_putnbr.c \
 		ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c
 
+PIPELIB=ft_popen.c
+
 FILES=$(addprefix $(FT_PRINTFDIR), $(PRINTFFILES)) \
-	  $(addprefix $(GNLDIR), $(GNLFILES))\
-	  $(addprefix $(CHARDIR), $(CHARLIB))\
-	  $(addprefix $(DIGITDIR), $(DIGITLIB))\
-	  $(addprefix $(LSTDIR), $(LSTLIB))\
-	  $(addprefix $(MEMDIR), $(MEMLIB))\
-	  $(addprefix $(STRDIR), $(STRLIB))\
-	  $(addprefix $(TEXTDIR), $(TEXTLIB))
+	  $(addprefix $(GNLDIR), $(GNLFILES)) \
+	  $(addprefix $(CHARDIR), $(CHARLIB)) \
+	  $(addprefix $(DIGITDIR), $(DIGITLIB)) \
+	  $(addprefix $(LSTDIR), $(LSTLIB)) \
+	  $(addprefix $(MEMDIR), $(MEMLIB)) \
+	  $(addprefix $(STRDIR), $(STRLIB)) \
+	  $(addprefix $(TEXTDIR), $(TEXTLIB)) \
+	  $(addprefix $(PIPEDIR), $(PIPELIB))
 
 OBJ=$(FILES:.c=.o)
 NAME=libft.a

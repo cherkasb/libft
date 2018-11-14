@@ -6,7 +6,7 @@
 /*   By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 18:25:38 by bcherkas          #+#    #+#             */
-/*   Updated: 2017/11/23 12:59:03 by bcherkas         ###   ########.fr       */
+/*   Updated: 2018/11/14 17:18:14 by bcherkas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <get_next_line.h>
+# include <ft_printf.h>
+
+# define R 0
+# define W 1
 
 typedef struct		s_list
 {
@@ -102,5 +107,8 @@ int					ft_lstlen(t_list *alst);
 void				ft_lstdelcontent(void *content, size_t content_size);
 t_list				*ft_lstpushback(t_list **alst, t_list *lst);
 t_list				*ft_strsplit_lst(char const *s, char c);
+
+int					ft_popen(char const *command,
+						char *const flags[], int mode);
 
 #endif
