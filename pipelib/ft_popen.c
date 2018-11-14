@@ -6,7 +6,7 @@
 /*   By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 14:40:27 by bcherkas          #+#    #+#             */
-/*   Updated: 2018/11/14 20:22:35 by bcherkas         ###   ########.fr       */
+/*   Updated: 2018/11/14 20:54:19 by bcherkas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 #include <stdio.h>
 #include <sys/wait.h>
 
-static int	forked(char *const flags[], char *const env[], int pipefd[2], int mode)
+static int	forked(char *const flags[], char *const env[],
+				int pipefd[2], int mode)
 {
 	int		err;
 
@@ -40,7 +41,8 @@ static int	forked(char *const flags[], char *const env[], int pipefd[2], int mod
 	return (-1);
 }
 
-int			ft_popen(char *const flags[], char *const env[], int mode)
+int			ft_popen(char *const flags[], char *const env[], int mode,
+					pid_t *pid_s)
 {
 	int		pipefd[2];
 	pid_t	pid;
@@ -51,10 +53,14 @@ int			ft_popen(char *const flags[], char *const env[], int mode)
 		return (-1);
 	pid = fork();
 	if (pid < 0)
-		return(-1);
+		return (-1);
 	if (!pid)
 		if (forked(flags, env, pipefd, mode) < 0)
 			return (-1);
+	if (pid_s)
+		*pid_s = pid;
+	else if (waitpid(pid, &pid, 0) < 0)
+		return (-1);
 	if (mode == R)
 	{
 		close(pipefd[1]);
