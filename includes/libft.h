@@ -6,7 +6,7 @@
 /*   By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 18:25:38 by bcherkas          #+#    #+#             */
-/*   Updated: 2018/11/14 19:43:17 by bcherkas         ###   ########.fr       */
+/*   Updated: 2018/11/14 20:23:31 by bcherkas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,6 @@ t_list				*ft_lstpushback(t_list **alst, t_list *lst);
 t_list				*ft_strsplit_lst(char const *s, char c);
 
 int					ft_popen(char *const flags[], char *const env[], int mode);
+int					ft_pclose(int fd, int pid);
 
 #endif

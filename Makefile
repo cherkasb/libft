@@ -6,7 +6,7 @@
 #    By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/30 19:19:19 by bcherkas          #+#    #+#              #
-#    Updated: 2018/11/14 17:15:23 by bcherkas         ###   ########.fr        #
+#    Updated: 2018/11/14 20:24:01 by bcherkas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ STRLIB=ft_strcat.c ft_strcmp.c ft_strdup.c ft_striteri.c ft_strlen.c \
 TEXTLIB=ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c ft_putnbr.c \
 		ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c
 
-PIPELIB=ft_popen.c
+PIPELIB=ft_popen.c ft_pclose.c
 
 FILES=$(addprefix $(FT_PRINTFDIR), $(PRINTFFILES)) \
 	  $(addprefix $(GNLDIR), $(GNLFILES)) \
