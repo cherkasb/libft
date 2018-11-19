@@ -6,7 +6,7 @@
 /*   By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 14:40:27 by bcherkas          #+#    #+#             */
-/*   Updated: 2018/11/14 20:54:19 by bcherkas         ###   ########.fr       */
+/*   Updated: 2018/11/19 19:44:30 by bcherkas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,18 +47,15 @@ int			ft_popen(char *const flags[], char *const env[], int mode,
 	int		pipefd[2];
 	pid_t	pid;
 
-	if (!flags || !(mode == W || mode == R))
+	if (!pid_s || !flags || !(mode == W || mode == R))
 		return (-1);
 	if (pipe(pipefd) < 0)
 		return (-1);
 	pid = fork();
 	if (pid < 0)
 		return (-1);
-	if (!pid)
-		if (forked(flags, env, pipefd, mode) < 0)
+	if (!pid && forked(flags, env, pipefd, mode) < 0)
 			return (-1);
-	if (pid_s)
-		*pid_s = pid;
 	else if (waitpid(pid, &pid, 0) < 0)
 		return (-1);
 	if (mode == R)
