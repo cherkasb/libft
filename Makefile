@@ -6,7 +6,7 @@
 #    By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/30 19:19:19 by bcherkas          #+#    #+#              #
-#    Updated: 2018/11/14 20:24:01 by bcherkas         ###   ########.fr        #
+#    Updated: 2018/11/20 14:48:46 by bcherkas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 CC=clang
 CFLAGS=-Wall -Wextra -Werror -I./includes
 
-FT_PRINTFDIR=ft_printf/
+PRINTFDIR=ft_printf/
 GNLDIR=getnextline/
 CHARDIR=charlib/
 DIGITDIR=digitlib/
@@ -24,9 +24,9 @@ STRDIR=strlib/
 TEXTDIR=textlib/
 PIPEDIR=pipelib/
 
-GNL=get_next_line.c
+GNLLIB=get_next_line.c
 
-FT_PRINTF=ft_printf.c ft_vprintf.c printf_core.c checkflags.c s_parse.c \
+PRINTFLIB=ft_printf.c ft_vprintf.c printf_core.c checkflags.c s_parse.c \
 			ft_utoa_base.c d_parse.c getsigned.c writeformatted.c x_parse.c \
 			o_parse.c u_parse.c p_parse.c unicode_c.c width.c k_parse.c
 
@@ -53,8 +53,8 @@ TEXTLIB=ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c ft_putnbr.c \
 
 PIPELIB=ft_popen.c ft_pclose.c
 
-FILES=$(addprefix $(FT_PRINTFDIR), $(PRINTFFILES)) \
-	  $(addprefix $(GNLDIR), $(GNLFILES)) \
+FILES=$(addprefix $(PRINTFDIR), $(PRINTFLIB)) \
+	  $(addprefix $(GNLDIR), $(GNLLIB)) \
 	  $(addprefix $(CHARDIR), $(CHARLIB)) \
 	  $(addprefix $(DIGITDIR), $(DIGITLIB)) \
 	  $(addprefix $(LSTDIR), $(LSTLIB)) \
