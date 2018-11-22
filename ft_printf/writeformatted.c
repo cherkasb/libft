@@ -6,7 +6,7 @@
 /*   By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/06 14:08:43 by bcherkas          #+#    #+#             */
-/*   Updated: 2018/02/18 15:05:16 by bcherkas         ###   ########.fr       */
+/*   Updated: 2018/11/22 17:35:31 by bcherkas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,7 @@ int		allocstring(t_buf *buflst, char **str)
 {
 	t_buf	*now;
 	int		len;
+	char	*strptr;
 
 	if (!str)
 		return (-1);
@@ -131,12 +132,13 @@ int		allocstring(t_buf *buflst, char **str)
 	len = buflst->bufflen;
 	if (!((*str) = ft_strnew(len)))
 		return (saveexit(buflst, NULL, NULL));
+	strptr = *str;
 	while (buflst)
 	{
-		ft_memcpy((*str), buflst->buff, buflst->size);
+		ft_memcpy(strptr, buflst->buff, buflst->size);
 		if (buflst->buff)
 			free(buflst->buff);
-		(*str) += buflst->size;
+		strptr += buflst->size;
 		now = buflst;
 		buflst = buflst->next;
 		free(now);

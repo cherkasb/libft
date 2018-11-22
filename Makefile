@@ -6,7 +6,7 @@
 #    By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/30 19:19:19 by bcherkas          #+#    #+#              #
-#    Updated: 2018/11/20 14:48:46 by bcherkas         ###   ########.fr        #
+#    Updated: 2018/11/22 18:01:38 by bcherkas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,10 +33,10 @@ PRINTFLIB=ft_printf.c ft_vprintf.c printf_core.c checkflags.c s_parse.c \
 CHARLIB=ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 		ft_isspace.c ft_tolower.c ft_toupper.c
 
-DIGITLIB=ft_abs.c ft_atoi.c ft_intlen.c ft_itoa.c
+DIGITLIB=ft_abs.c ft_atoi.c ft_intlen.c ft_itoa.c ft_atof.c ft_ftoa.c
 
 LSTLIB=ft_lstadd.c ft_lstdel.c ft_lstdelcontent.c ft_lstdelone.c ft_lstiter.c \
-	   ft_lstlen.c ft_lstmap.c ft_lstnew.c ft_lstpushback.c
+	   ft_lstlen.c ft_lstmap.c ft_lstnew.c ft_lstpushback.c ft_lstsort.c
 
 MEMLIB=ft_bzero.c ft_delarr.c ft_memalloc.c ft_memccpy.c ft_memchr.c \
 	   ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memmove.c ft_memset.c

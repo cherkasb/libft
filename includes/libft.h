@@ -6,7 +6,7 @@
 /*   By: bcherkas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 18:25:38 by bcherkas          #+#    #+#             */
-/*   Updated: 2018/11/14 20:50:24 by bcherkas         ###   ########.fr       */
+/*   Updated: 2018/11/22 17:59:20 by bcherkas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ char				*ft_strnstr(const char *haystack,
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
+float				ft_atof(const char *str);
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -80,6 +81,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
+void				ftoa(float n, char *res, int afterpoint);
 
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
@@ -107,6 +109,7 @@ int					ft_lstlen(t_list *alst);
 void				ft_lstdelcontent(void *content, size_t content_size);
 t_list				*ft_lstpushback(t_list **alst, t_list *lst);
 t_list				*ft_strsplit_lst(char const *s, char c);
+void				ft_lstsort(t_list **player, int (*cmp)(t_list *, t_list *));
 
 int					ft_popen(char *const flags[], char *const env[], int mode,
 						pid_t *pid);
